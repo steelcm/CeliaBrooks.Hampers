@@ -39,6 +39,11 @@
     <TypeScriptCompile Include="routes\user.ts" />
     <Content Include="assets\sass\main.scss" />
     <Content Include="package.json" />
+    <Content Include="public\images\bg.jpg" />
+    <Content Include="public\images\celia.jpg" />
+    <Content Include="public\images\close.svg" />
+    <Content Include="public\images\hamper.jpg" />
+    <Content Include="public\images\logo.svg" />
     <Content Include="README.md" />
     <Content Include="tsd.json" />
     <Content Include="views\error.jade" />
