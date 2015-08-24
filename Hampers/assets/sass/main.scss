@@ -1,0 +1,35 @@
+﻿
+$primary-color: #ee2d7b;
+$secondary-color: white;
+
+$primary-background-color: #2d2f2f;
+$secondary-background-color: white;
+
+body {
+    background-color: $secondary-background-color;
+    font-size: 16px;
+
+    .content {
+        background-color: $primary-background-color;
+        color: $secondary-color;
+        border-color: black;
+        border-width: 0 1px;
+        border-style: solid;
+
+        h1 {
+            color: $primary-color;
+            font-size: 19px;
+        }
+        
+        h3 {
+            font-size: 16px;
+        }
+
+        hr {
+            width: 35px;
+            height: 2px;
+            border: 0 none;
+            background-color: $secondary-color;
+        }
+    }
+}

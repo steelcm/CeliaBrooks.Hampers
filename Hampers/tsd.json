@@ -1,0 +1,39 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "serve-static/serve-static.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "mime/mime.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "express/express.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "node/node.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "stylus/stylus.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "errorhandler/errorhandler.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "morgan/morgan.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "cookie-parser/cookie-parser.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "body-parser/body-parser.d.ts": {
+      "commit": "b2345aee407127928f247165c91e18bd7dc1a14a"
+    },
+    "gulp/gulp.d.ts": {
+      "commit": "7c27233ae47768442b9b0a40d7f03fadf593fad2"
+    }
+  }
+}
