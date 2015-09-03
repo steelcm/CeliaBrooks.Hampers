@@ -20,5 +20,8 @@
     "morgan": "^1.6.1",
     "stylus": "*",
     "tsd": "*"
+  },
+  "devDependencies": {
+    "gulp-typescript": "^2.8.1"
   }
 }
