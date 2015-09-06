@@ -1,23 +1,28 @@
 ﻿
-$primary-color: #ee2d7b;
+$primary-color: #f7941e;
 $secondary-color: white;
+$tertiary-color: #ee2d7b;
 
 $primary-background-color: #2d2f2f;
-$secondary-background-color: white;
+$secondary-background-color: grey;
+
+$primary-font: Lato, sans-serif;
+$secondary-font: Lora, sans-serif;
 
 body {
     background-color: $secondary-background-color;
     font-size: 16px;
 
     .content {
-        background: $primary-background-color url(/images/bg.jpg) repeat;
+        @extend ._primary-background;
         color: $secondary-color;
         border-color: black;
         border-width: 0 1px;
         border-style: solid;
+        padding: 20px;
         h1 {
             color: $primary-color;
-            font-size: 19px;
+            font-size: 26px;
         }
         
         h3 {
@@ -26,9 +31,51 @@ body {
 
         hr {
             width: 35px;
-            height: 2px;
+            height: 4px;
             border: 0 none;
             background-color: $secondary-color;
         }
+        a {
+            color: $tertiary-color;
+        }
     }
+}
+
+.text-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;    
+    margin-left: -16px;
+    padding-left: 0;
+    width: 80%;
+    max-width: 350px;
+    li {
+        padding: 0.5em;
+        &.selected {
+            @extend ._primary-background;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            .btn {
+                font-size: 1.5em;
+                background-color: $primary-color;
+                border-color: $primary-color;
+            }
+        }
+        .btn {
+            width: 90%;
+            border: 2px solid white;
+            background-color: rgba(255, 255, 255, 0.70);
+        }
+    }
+}
+
+._primary-background {
+    background: $primary-background-color url('/images/bg.jpg') repeat;
 }

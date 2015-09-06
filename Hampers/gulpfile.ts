@@ -6,7 +6,7 @@ import nodemon = require('gulp-nodemon');
 import browserSync = require('browser-sync');
 import typeScript = require('gulp-typescript');
 
-var watchFiles = ["app.js", "routes/*.js", "views/*.jade", "assets/sass/**/*.scss"];
+var watchFiles = ["app.js", "routes/*.js", "views/*.jade", "assets/sass/**/*.scss", "assets/scripts/**/*.ts"];
 
 gulp.task('default', ['browser-sync', 'styles-watch', 'styles-build', 'js-watch', 'js-build'], () => { });
 
@@ -15,7 +15,7 @@ gulp.task('browser-sync', ['nodemon'], () => {
     browserSync.init(null, {
         proxy: "http://localhost:3000",
         files: watchFiles,
-        browser: "firefox",
+        browser: "google chrome",
         port: 7000,
         reloadDelay: 1000
     });
@@ -47,12 +47,16 @@ gulp.task('styles-watch', () => {
 });
 
 
-var jsWatchFiles = ['**/*.ts', '!**/*.d.ts', '!node_modules/**/*.ts'];
+var jsServerFiles = ['**/*.ts', '!**/*.d.ts', '!node_modules/**/*.ts', '!assets/**/*.ts'];
+var jsClientFiles = ['assets/**/*.ts'];
 gulp.task('js-build', () => {
-    gulp.src(jsWatchFiles)
+    gulp.src(jsServerFiles)
         .pipe(typeScript());
+    var jsClientOutput = gulp.src(jsClientFiles)
+        .pipe(typeScript());
+    return jsClientOutput.js.pipe(gulp.dest('public'));
 });
 
 gulp.task('js-watch', () => {
-    gulp.watch(jsWatchFiles, ['js-build'])
+    gulp.watch(['**/*.ts', '!**/*.d.ts', '!node_modules/**/*.ts'], ['js-build'])
 });

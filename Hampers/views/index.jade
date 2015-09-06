@@ -1,21 +1,29 @@
 ﻿extends layout
 
 block content
-    div(class='row')
-        div(class='col-md-6 col-md-offset-3 text-center content')
+    div.row
+        div.col-xs-12.col-sm-6.col-md-offset-4.col-md-4.content
             header
-                h2 Celia Brooks
+                img.text-center(src='/images/logo.svg', alt='Celia Brooks')
                 hr
-                h1 2015 HAND-PICKED HAMPERS
+                h1.text-center 2015 HAND-PICKED HAMPERS
                 hr
-                h3 the finest products from Borough Market
-
+                h3.text-center all products from Borough Market
+    div.row
+        div.col-xs-12.col-sm-6.col-md-offset-4.col-md-4.content
             div(class='text-left')
-                p This luxury non-perishable collection includes some of the most exotic and delicious food and drink items imaginable. Shock someone with your amazing foodie tastes or be greedy and keep it all for yourself. It's up to you. We promise not to judge.
+                p This luxury non-perishable collection from Borough Market includes some of the most exotic and delicious food and drink items imaginable. Shock someone with your amazing foodie tastes or be greedy and keep it all for yourself. It's up to you. We promise not to judge.
                 p Hand curated by Celia Brooks and loaded with spices, chocolate, cheese, meats (veggie substitutions available), nuts, oils and so many more bespoke gems, it's enough to make any food lover think they've died and gone to Heaven. Are you ready to amaze your taste buds or impress your friends an loved ones?
-                p Order now and experience a true taste adventure. Want to know more about what's included? Click here
+                p Order now and experience a true taste adventure. Want to know more about what's included? 
+                    a Click here
 
-            button(class="btn") &pound;160 - Buy Now
+        div.col-xs-12.col-sm-6.col-md-4
+            ul
+                li.selected
+                    a.btn.btn-primary.text-center &pound;160 - buy now
+                li
+                    a.btn.btn-default.text-center Why did I pick these products?
+                li
+                    a.btn.btn-default.text-center What's included in the hamper?    
 
-    footer
-        p &copy; 2015
+    script(src='/scripts/main.js' type='text/javascript')
