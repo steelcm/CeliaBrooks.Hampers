@@ -11,20 +11,18 @@ $secondary-font: Lora, sans-serif;
 
 body {
     background-color: $secondary-background-color;
-    font-size: 16px;
+    font-size: 14px;
 
     .content {
         @extend ._primary-background;
         color: $secondary-color;
-        border-color: black;
-        border-width: 0 1px;
-        border-style: solid;
         padding: 20px;
+        z-index: 1050;
         h1 {
             color: $primary-color;
             font-size: 26px;
         }
-        
+
         h3 {
             font-size: 16px;
         }
@@ -35,10 +33,15 @@ body {
             border: 0 none;
             background-color: $secondary-color;
         }
+
         a {
             color: $tertiary-color;
         }
     }
+}
+
+.modal-backdrop {
+    opacity: 0.5
 }
 
 .text-center {
@@ -47,27 +50,43 @@ body {
     display: block;
 }
 
-ul {
-    list-style: none;    
+div.close-btn {
+    @extend ._primary-background;
+    position: absolute;
+    right: -61px;
+    top: -20px;
+    z-index: 100;
+    a, a:hover {
+        border: 0;
+        img {
+            padding: 5px;
+        }
+    }
+}
+
+ul.nav {
+    margin-top: 30%;
+    list-style: none;
     margin-left: -16px;
     padding-left: 0;
     width: 80%;
     max-width: 350px;
+
     li {
         padding: 0.5em;
+
         &.selected {
             @extend ._primary-background;
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
-            border-right: 1px solid black;
             padding-top: 1em;
             padding-bottom: 1em;
-            .btn {
-                font-size: 1.5em;
-                background-color: $primary-color;
-                border-color: $primary-color;
-            }
         }
+
+        .btn.btn-primary {
+            font-size: 1.5em;
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+
         .btn {
             width: 90%;
             border: 2px solid white;
@@ -78,4 +97,9 @@ ul {
 
 ._primary-background {
     background: $primary-background-color url('/images/bg.jpg') repeat;
+}
+
+html,body,.fill{
+    height:100%;
+    min-height:100%;
 }

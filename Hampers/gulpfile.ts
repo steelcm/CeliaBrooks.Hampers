@@ -5,10 +5,11 @@ import sass = require('gulp-sass');
 import nodemon = require('gulp-nodemon');
 import browserSync = require('browser-sync');
 import typeScript = require('gulp-typescript');
+import jade = require('gulp-jade');
 
 var watchFiles = ["app.js", "routes/*.js", "views/*.jade", "assets/sass/**/*.scss", "assets/scripts/**/*.ts"];
 
-gulp.task('default', ['browser-sync', 'styles-watch', 'styles-build', 'js-watch', 'js-build'], () => { });
+gulp.task('default', ['browser-sync', 'styles-watch', 'styles-build', 'js-watch', 'js-build', 'html-watch', 'html-build'], () => { });
 
 gulp.task('browser-sync', ['nodemon'], () => {
     console.log("executed");
@@ -34,6 +35,16 @@ gulp.task('nodemon', (cb) => {
             started = true;
         }
     });
+});
+
+gulp.task('html-build', () => {
+    gulp.src('assets/pages/**/*.jade')
+        .pipe(jade())
+        .pipe(gulp.dest('public/pages/'));
+});
+
+gulp.task('html-watch', () => {
+    gulp.watch('assets/pages/**/*.jade', ['html-build']);
 });
 
 gulp.task('styles-build', () => {

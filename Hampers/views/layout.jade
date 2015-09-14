@@ -1,8 +1,11 @@
 ﻿doctype html
-html(lang="en")
+html(lang="en", ng-app="hamperApp")
   head
     title= title
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/main.css')
-  body.container-flui
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js' type='text/javascript')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js' type='text/javascript')
+    
+  body.fill.container-flui(ng-controller="homeController")
     block content

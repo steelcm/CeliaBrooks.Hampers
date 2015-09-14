@@ -38,6 +38,9 @@
     <TypeScriptCompile Include="gulpfile.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
+    <Content Include="assets\pages\about.jade" />
+    <Content Include="assets\pages\home.jade" />
+    <Content Include="assets\pages\why.jade" />
     <Content Include="assets\sass\main.scss" />
     <Content Include="package.json" />
     <Content Include="public\images\bg.jpg" />
@@ -69,12 +72,14 @@
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="assets\pages\" />
     <Folder Include="assets\scripts\" />
     <Folder Include="assets\sass\" />
     <Folder Include="bin\" />
     <Folder Include="assets\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
+    <Folder Include="public\pages\" />
     <Folder Include="public\scripts\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />

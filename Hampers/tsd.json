@@ -34,6 +34,12 @@
     },
     "gulp/gulp.d.ts": {
       "commit": "7c27233ae47768442b9b0a40d7f03fadf593fad2"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "7a3ca1f0b8a0960af9fc1838f3234cc9d6ce0645"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "7a3ca1f0b8a0960af9fc1838f3234cc9d6ce0645"
     }
   }
 }
