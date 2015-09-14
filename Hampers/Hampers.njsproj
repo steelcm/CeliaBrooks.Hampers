@@ -40,6 +40,7 @@
     <TypeScriptCompile Include="routes\user.ts" />
     <Content Include="assets\pages\about.jade" />
     <Content Include="assets\pages\home.jade" />
+    <Content Include="assets\pages\payment.jade" />
     <Content Include="assets\pages\why.jade" />
     <Content Include="assets\sass\main.scss" />
     <Content Include="package.json" />

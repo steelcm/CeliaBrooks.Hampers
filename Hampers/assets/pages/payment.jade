@@ -1,0 +1,15 @@
+﻿div.row
+    div.col-xs-12.text-center
+        div.close-btn 
+            a(href='/#/')
+                img(src='/images/close.svg', alt='Close')
+        header
+            h2 What's included in the hamper?
+            hr  
+div.row
+    div.col-xs-12
+        div(class='text-left')
+            p This is where all the payment forms go!
+            form#checkout(method="post", action"/checkout")
+                div#payment-form
+                input(type="submit", value="Pay 20£")
