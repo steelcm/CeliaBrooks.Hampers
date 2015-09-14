@@ -2,8 +2,13 @@
 
 block content
     div.row.fill
-        div.col-xs-12.col-sm-6.col-md-offset-4.col-md-4.no-float.content(ng-view).fill
-        div.col-xs-12.col-sm-6.col-md-4
+        div.hidden-xs.hidden-sm.col-md-4.fill
+            div.background-image.left.blur#background-img-left-placeholder
+            div.background-image.left.fadein#background-img-left(ng-show='imageLeftLoaded')
+        div.col-xs-12.col-sm-6.col-md-4.no-float.content.fill(ng-view)
+        div.col-xs-12.col-sm-6.col-md-4.fill
+            div.background-image.right.blur#background-img-right-placeholder
+            div.background-image.right.fadein#background-img-right(ng-show='imageRightLoaded')
             ul.nav
                 li.selected
                     a.btn.btn-primary.text-center &pound;160 - buy now

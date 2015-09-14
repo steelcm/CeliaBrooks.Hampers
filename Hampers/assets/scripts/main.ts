@@ -1,4 +1,4 @@
-﻿var hamperApp = angular.module('hamperApp', ['ngRoute']);
+﻿var hamperApp = angular.module('hamperApp', ['ngRoute', 'ngAnimate']);
 
 hamperApp.config(function ($routeProvider) {
     $routeProvider
@@ -20,8 +20,9 @@ hamperApp.config(function ($routeProvider) {
 });
 
 var addBackdrop = function () {
-    var modalBackdrop = document.createElement('div');
+    var modalBackdrop = document.createElement('a');
     modalBackdrop.setAttribute('class', 'modal-backdrop');
+    modalBackdrop.setAttribute('href', '/#/');
     document.body.appendChild(modalBackdrop);
 }
 
@@ -37,8 +38,35 @@ var removeBackdrop = function () {
 }
 
 
-hamperApp.controller('homeController', function ($scope) {
+
+var leftUrl = 'images/celia.jpg';
+var rightUrl = 'images/hamper.jpg';
+
+hamperApp.controller('homeController', function ($scope, $location) {
     removeBackdrop();
+    // setup image
+    var imageLeft = new Image();
+    var imageRight = new Image();
+    $scope.imageLeftLoaded = false;
+    $scope.imageRightLoaded = false;
+    // setup image onload event
+    imageLeft.onload = function () {
+        document.getElementById('background-img-left').style.backgroundImage = "url('" + leftUrl + "')";
+        $scope.imageLeftLoaded = true;
+        $scope.$apply();
+    }
+    imageRight.onload = function () {
+        document.getElementById('background-img-right').style.backgroundImage = "url('" + rightUrl + "')";
+        $scope.imageRightLoaded = true;
+        $scope.$apply();
+    }
+    // load background image after view has loaded
+    $scope.$on('$viewContentLoaded', function () {
+        imageLeft.src = leftUrl;
+        imageRight.src = rightUrl;
+        if (imageLeft.complete) imageLeft.onload(null);
+        if (imageRight.complete) imageRight.onload(null);
+    });
 });
 
 hamperApp.controller('whyController', function ($scope) {
