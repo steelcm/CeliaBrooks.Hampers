@@ -1,0 +1,117 @@
+body {
+  background-color: grey;
+  font-size: 14px; }
+  body .content {
+    color: white;
+    padding: 20px;
+    z-index: 1050; }
+    body .content h1 {
+      color: #f7941e;
+      font-size: 26px; }
+    body .content h3 {
+      font-size: 16px; }
+    body .content hr {
+      width: 35px;
+      height: 4px;
+      border: 0 none;
+      background-color: white; }
+    body .content a {
+      color: #ee2d7b; }
+
+.modal-backdrop {
+  opacity: 0.5; }
+
+.text-center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+div.close-btn {
+  position: absolute;
+  right: -76px;
+  top: -20px;
+  z-index: 100; }
+  div.close-btn a, div.close-btn a:hover {
+    border: 0; }
+    div.close-btn a img, div.close-btn a:hover img {
+      padding: 5px; }
+
+ul.nav {
+  margin-top: 30%;
+  list-style: none;
+  margin-left: -16px;
+  padding-left: 0;
+  width: 80%;
+  max-width: 350px; }
+  ul.nav li {
+    padding: 0.5em; }
+    ul.nav li.selected {
+      padding-top: 1em;
+      padding-bottom: 1em; }
+    ul.nav li .btn.btn-primary {
+      font-size: 1.5em;
+      background-color: #f7941e;
+      border-color: #f7941e; }
+    ul.nav li .btn {
+      width: 90%;
+      border: 2px solid white;
+      background-color: rgba(255, 255, 255, 0.7); }
+
+._primary-background, body .content, div.close-btn, ul.nav li.selected {
+  background: #2d2f2f url("/images/bg.jpg") repeat; }
+
+html, body, .fill {
+  height: 100%;
+  min-height: 100%; }
+
+.row {
+  margin: 0; }
+
+.background-image {
+  width: 110%;
+  height: 100%;
+  position: absolute; }
+
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+
+.background-image.right {
+  background-size: cover;
+  background-position: top right;
+  right: 0; }
+
+.background-image.left {
+  background-size: cover;
+  background-position: top left;
+  left: 0; }
+
+#background-img-left-placeholder {
+  background-image: url("/images/celia-low.jpg"); }
+
+#background-img-right-placeholder {
+  background-image: url("/images/hamper-low.jpg"); }
+
+.fadein {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  opacity: 1;
+  /* Default value but added for clarity */ }
+
+/* Initial state when showing */
+.fadein.ng-hide-remove {
+  opacity: 0;
+  display: block !important; }
+
+/* Will transition towards this state */
+.fadein.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1; }
+
+form {
+  background: white;
+  padding: 1em; }
